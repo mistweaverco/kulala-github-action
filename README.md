@@ -14,7 +14,7 @@
 
 <p></p>
 
-# Other tools 🔧 from the Kulala 🐼 family 🧑‍🧑‍🧒‍🧒
+# Other tools 🔧 from the Kulala 🐼 family 🌈
 
 [Kulala for Neovim][kulala.nvim] •
 [Kulala CLI][kulala-cli] •
