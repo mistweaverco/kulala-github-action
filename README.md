@@ -9,8 +9,6 @@
 [![Development status][badge-development-status]][development-status]
 [![Our manifesto][badge-our-manifesto]][our-manifesto]
 [![AI Policty][badge-ai-policy]][ai-policy]
-[![Status of tests][badge-test-status]][link-test-status]
-
 
 [Usage](https://kulala.app/usage) •
 
@@ -64,8 +62,6 @@ jobs:
 [discord]: https://mistweaverco.com/discord
 [badge-made-with-love]: https://mistweaverco.com/assets/badges/made-with-love.svg
 [contributors]: https://github.com/mistweaverco/kulala-github-action/graphs/contributors
-[badge-test-status]: https://img.shields.io/github/actions/workflow/status/mistweaverco/kulala-github-action/tests.yml?label=main&branch=main&style=for-the-badge
-[link-test-status]: https://github.com/mistweaverco/kulala-github-action/actions/workflows/tests.yml
 [kulala-cli]: https://github.com/mistweaverco/kulala-cli
 [kulala-fmt]: https://github.com/mistweaverco/kulala-fmt
 [kulala-desktop]: https://github.com/mistweaverco/kulala-desktop
