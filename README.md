@@ -16,7 +16,7 @@
 
 # Other tools 🔧 from the Kulala 🐼 family 🧑‍🧑‍🧒‍🧒
 
-[Kulala for Neovim][kulala.nvim]
+[Kulala for Neovim][kulala.nvim] •
 [Kulala CLI][kulala-cli] •
 [Kulala Formatter (and converter)][kulala-fmt] •
 [Kulala Desktop][kulala-desktop] •
