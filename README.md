@@ -2,84 +2,37 @@
 
 ![Kulala Logo](logo.svg)
 
-# kulala.nvim
+# kulala-github-action
 
-[![Made with love](assets/badge-made-with-love.svg)](https://github.com/mistweaverco/kulala.nvim/graphs/contributors)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/mistweaverco/kulala.nvim?style=for-the-badge)](https://github.com/mistweaverco/kulala.nvim/releases/latest)
-[![Discord](assets/badge-discord.svg)](https://discord.gg/QyVQmfY4Rt)
+[![Made with love][badge-made-with-love]][contributors]
+[![Discord][badge-discord]][discord]
+[![Development status][badge-development-status]][development-status]
+[![Our manifesto][badge-our-manifesto]][our-manifesto]
+[![AI Policty][badge-ai-policy]][ai-policy]
+[![Status of tests][badge-test-status]][link-test-status]
+
+
+[Usage](https://kulala.app/usage) •
 
 <p></p>
 
-A fully-featured REST Client Interface for Neovim.
+# Other tools 🔧 from the Kulala 🐼 family 🧑‍🧑‍🧒‍🧒
 
-Kulala is swahili for "rest" or "relax".
+[Kulala for Neovim][kulala.nvim]
+[Kulala CLI][kulala-cli] •
+[Kulala Formatter (and converter)][kulala-fmt] •
+[Kulala Desktop][kulala-desktop] •
+[Kulala for Visual Studio Code][kulala.vscode] •
+[Kulala Core][kulala-core]
 
-It allows you to make HTTP requests from within Neovim, CLI and CI/CD pipelines.
-
-Check our main [repo](https://github.com/mistweaverco/kulala.nvim) and [documentation](https://neovim.getkulala.net/docs/usage/cli-ci) for more information.
+---
 
 </div>
 
-# CLI and CI
+## Usage
 
-The Kulala CLI is a command-line interface that allows you to execute HTTP files from the command line. 
-
-It can be used standalone or as part of a CI/CD pipeline, effectively turning your HTTP files into an API test suite.
-
-## Requirements
-
-Kulala CLI requires Neovim (nvim) and curl to be present on your PATH. 
-
-Optionally, grpcurl (for GRPC), websocat (for Websockets), jq (for JSON formatting) and nvim-treesitter for response highlighting may be installed.
-
-## Configuration
-
-The CLI comes with some sane defaults, but you can override them in `kulala.nvim/lua/cli/config.lua`.
-
-## Kulala CLI
-
-Usage: 
-
-      Kulala CLI [--list] [--halt] [-m] [-h] 
-
-      [-v {body,headers,headers_body,verbose,script_output,report}]
-
-      [-e <env>] [-n <name> ...] [-l <line> ...]
-
-      [<input>] ...
-
-Arguments:
-
-      input                      Path to folder or HTTP file/s
-                            
-Options:                    
-
-      --list                     List requests in HTTP file
-                                
-      --name (-n) [<name>] ...   Filter requests by name
-                                
-      --line (-l) [<line>] ...   Filter requests by line #
-                                
-      --env (-e) <env>           Environment
-                                
-      --view (-v)                Response view
-                                  {body,headers,headers_body,verbose,script_output,report}
-                                
-      --halt                     Halt on error
-                                
-      --mono (-m)                No color output
-                                
-      --help (-h)                Help
-
-```bash
-kulala_cli http_examples/cli.http -e prod -v report -n Login Request -l 15 20 
-kulala_cli cli.http grpc.http
-kulala_cli http_examples --list
-```
-
-## Kulala CI
-
-Kulala provides a Github Action to run HTTP files as part of your CI/CD pipeline.
+Kulala provides a Github Action to run HTTP files as
+part of your CI/CD pipeline.
 
 Example:
 ```yaml
@@ -93,16 +46,36 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup Kulala CI
         uses: mistweaverco/kulala-github-action@v1
 
       - name: Run Kulala CI
         run: |
-          kulala_cli.lua http/cli.http
-          kulala_cli.lua http -v report
-        shell: bash
-        env:
-          COLUMNS: 120
+          # Run all .http files in the http-files/ directory
+          # and only output if there are test failures
+          kulala run http-files/ --tests --quiet
 ```
+
+
+
+[badge-discord]: https://mistweaverco.com/assets/badges/discord.svg
+[discord]: https://mistweaverco.com/discord
+[badge-made-with-love]: https://mistweaverco.com/assets/badges/made-with-love.svg
+[contributors]: https://github.com/mistweaverco/kulala-github-action/graphs/contributors
+[badge-test-status]: https://img.shields.io/github/actions/workflow/status/mistweaverco/kulala-github-action/tests.yml?label=main&branch=main&style=for-the-badge
+[link-test-status]: https://github.com/mistweaverco/kulala-github-action/actions/workflows/tests.yml
+[kulala-cli]: https://github.com/mistweaverco/kulala-cli
+[kulala-fmt]: https://github.com/mistweaverco/kulala-fmt
+[kulala-desktop]: https://github.com/mistweaverco/kulala-desktop
+[kulala.vscode]: https://github.com/mistweaverco/kulala.vscode
+[kulala-core]: https://github.com/mistweaverco/kulala-core
+[kulala.nvim]: https://github.com/mistweaverco/kulala.nvim
+[demo-image]: https://github.com/user-attachments/assets/a7b3b01f-0115-44dc-94d2-8abd4db6fb60
+[badge-development-status]: https://mistweaverco.com/assets/badges/development-status.svg
+[development-status]: https://mistweaverco.com/roadmap?filter=kulala-github-action
+[badge-ai-policy]: https://mistweaverco.com/assets/badges/ai-policy.svg
+[ai-policy]: https://mistweaverco.com/ai-policy
+[badge-our-manifesto]: https://mistweaverco.com/assets/badges/our-manifesto.svg
+[our-manifesto]: https://mistweaverco.com/manifesto
