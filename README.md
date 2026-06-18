@@ -47,7 +47,7 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Setup Kulala CI
-        uses: mistweaverco/kulala-github-action@v1
+        uses: mistweaverco/kulala-github-action@v3
 
       - name: Run Kulala CI
         run: |
