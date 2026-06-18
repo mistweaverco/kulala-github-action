@@ -10,7 +10,7 @@
 [![Our manifesto][badge-our-manifesto]][our-manifesto]
 [![AI Policty][badge-ai-policy]][ai-policy]
 
-[Usage](https://kulala.app/usage) •
+[Usage](#usage)
 
 <p></p>
 
