@@ -2,3 +2,4 @@ allowBuilds:
   '@mistweaverco/kulala-cli': true
 minimumReleaseAgeExclude:
   - '@mistweaverco/kulala-cli@0.10.5'
+  - '@mistweaverco/kulala-cli@0.12.2'

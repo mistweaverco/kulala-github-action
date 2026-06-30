@@ -208,15 +208,15 @@ importers:
   .:
     dependencies:
       '@mistweaverco/kulala-cli':
-        specifier: 0.10.5
-        version: 0.10.5
+        specifier: 0.12.2
+        version: 0.12.2
 
 packages:
 
-  '@mistweaverco/kulala-cli@0.10.5':
-    resolution: {integrity: sha512-eVppZXHS7DguNwDh5ANawbNpuhBLL2cE05TGM9rdgKXNAxV8C9P8F+AbEHonV7rutIOYeFeXU7lfjE9Uux/aHQ==}
+  '@mistweaverco/kulala-cli@0.12.2':
+    resolution: {integrity: sha512-SXVOezb8iWwFsmvIiL8gEaA/3LhSCMWbuXH3l3SmAPhfY9ZiUr3iMlU+NHShgXTwXYFuhdD1LSZFmQ0OrjJbVg==}
     hasBin: true
 
 snapshots:
 
-  '@mistweaverco/kulala-cli@0.10.5': {}
+  '@mistweaverco/kulala-cli@0.12.2': {}
