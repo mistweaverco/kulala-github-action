@@ -18,6 +18,6 @@
   },
   "type": "module",
   "dependencies": {
-    "@mistweaverco/kulala-cli": "0.12.2"
+    "@mistweaverco/kulala-cli": "0.12.3"
   }
 }
