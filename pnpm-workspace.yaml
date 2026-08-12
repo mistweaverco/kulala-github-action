@@ -7,3 +7,4 @@ minimumReleaseAgeExclude:
   - '@mistweaverco/kulala-cli@0.13.0'
   - '@mistweaverco/kulala-cli@0.13.1'
   - '@mistweaverco/kulala-cli@0.15.0'
+  - '@mistweaverco/kulala-cli@0.16.0'
